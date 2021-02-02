@@ -21,4 +21,8 @@ if (!isset($_SESSION['loggedin'])) {
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
+
+<h1>welcome <?php echo $_SESSION['user']['username']?></h1>
+<a href="logout.php">logout</a>
+<a href="upload_image.php?user=<?php echo $_SESSION['user']['id']; ?>">add post</a>
      
