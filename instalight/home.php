@@ -4,8 +4,7 @@
 require_once 'header.php';
 ?>
 
-<h1>welcome <?php echo $_SESSION['user']['username']?></h1>
-<a href="logout.php">logout</a>
+
 
 <div class="container">
 <div class="row">
