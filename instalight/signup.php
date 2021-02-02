@@ -1,4 +1,20 @@
-<?php require_once 'header.php';
+<?php 
+    require_once 'header.php';
+    require_once 'function.php';
+    if(isset($_POST['submit-signup'])){
+    
+        $saveData = [
+            'username' => $username = $_POST['username'],
+            'email' => $email = $_POST['email'],
+            'password' => $password = password_hash($_POST['pass'], PASSWORD_BCRYPT)
+        ];
+    
+        saveToDB($pdo, 'users', $saveData);
+
+        header('Location: index.html');
+    }
+
+
 ?>
 
 <body>
@@ -28,7 +44,7 @@
   <div class="row">
   <div class="col">
     <div class="form-group">
-      <button name ="submit" class="btn btn-succes" type="submit">SUMBIT</button>
+      <button name ="submit-signup" class="btn btn-succes" type="submit">SUMBIT</button>
     </div>
     </div>
   </div>
