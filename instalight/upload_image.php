@@ -40,8 +40,8 @@ if(isset($_GET['user'])){
 ?>
 
 <?php if(isset($_GET['user'])) : ?>
-<div >
-        <h2 >Upload Image</h2>
+<div>
+        <h2>Upload Image</h2>
         <form method="POST" enctype="multipart/form-data">
             <label for="titel">Titel:</label>
             <input type="text" name="title" id="title">
