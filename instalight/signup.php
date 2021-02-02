@@ -15,6 +15,9 @@
     }
 
 
+
+
+
 ?>
 
 <body>
@@ -26,18 +29,18 @@
     <div class="row">
     <div class="col">
     <div class="form-group">
-      <input name="username" type="username" class="form-control" placeholder="Username">
+      <input name="username" type="username" class="form-control" placeholder="Username" require>
     </div>
     </div>
 
     <div class="col">
     <div class="form-group">
-      <input name="email" type="email" class="form-control" placeholder="Email">
+      <input name="email" type="email" class="form-control" placeholder="Email" require>
     </div>
     </div>
     <div class="col">
     <div class="form-group">
-      <input name="pass" type="password" class="form-control" placeholder="Password">
+      <input name="pass" type="password" class="form-control" placeholder="Password"require>
     </div>
   </div>
   </div>

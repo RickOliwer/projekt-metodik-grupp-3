@@ -12,6 +12,8 @@ function saveToDB($pdo, $tableName, $newData){
         ':' . implode(', :', array_keys($newData))    
     );
 
-    $statement = $pdo->prepare($sql);
-    $statement->execute($newData);
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($newData);
+
 }
+
