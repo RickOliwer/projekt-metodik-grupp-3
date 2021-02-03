@@ -1,15 +1,19 @@
 /* Login */
 
-html {
-    background-color: #56baed;
-  }
   
   body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
     
   }
-  
+  header{
+    position: relative;
+    z-index: 100;
+  }
+
+  .main-container{
+    background-color: rgb(242, 242, 242);
+  }
   a {
     color: #92badd;
     display:inline-block;
@@ -299,9 +303,9 @@ html {
 *
 */
 .hero {
-  padding: 6.25rem 0px !important;
+  padding: 3rem 0px !important;
   margin: 0px !important;
-  color: #0d0d0d;
+  
   
 }
 .cardbox {
@@ -387,12 +391,20 @@ text-align: center;
 .media-body p{
   font-family: 'Rokkitt', serif;	
   font-weight: 500 !important;
-  font-size: 14px;
+  font-size: 20px;
   color: #88898a;
 }
 .media-body small span{
   font-family: 'Rokkitt', serif;	
   font-size: 12px;
+  color: #aaa;
+  margin-right: 10px;
+}
+
+.media-body .title-txt span {
+  font-family: 'Rokkitt', serif;	
+  font-size: 18px;
+  font-weight: 600;
   color: #aaa;
   margin-right: 10px;
 }
@@ -426,50 +438,9 @@ text-align: center;
  border-radius: 0.5em;
     box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
 }	
-.cardbox-base ul{
- margin: 10px 0px 10px 15px!important; 
- padding: 10px !important;
- font-size: 0px;	
-  display: inline-block;
-}
-.cardbox-base li {
-  list-style: none;
-  margin: 0px 0px 0px -8px !important;
-  padding: 0px 0px 0px 0px !important;
-  display: inline-block;
-}
-
-.cardbox-base li a{
-  margin: 0px !important;
-  padding: 0px !important;
-}
-.cardbox-base li a i{
- position: relative;
- top: 4px; 
- font-size: 16px;
- color: #8d8d8d;
- margin-right: 15px;
-}
-.cardbox-base li a span{
- font-family: 'Rokkitt', serif;
- font-size: 14px;
- color: #8d8d8d;
- margin-left: 20px;
- position: relative;
- top: 5px; 
-}
-.cardbox-base li a em{
- font-family: 'Rokkitt', serif;
- font-size: 14px;
- color: #8d8d8d;
- position: relative;
- top: 3px; 
-}
-.cardbox-base li a img{
-  width: 25px;
-  height: 25px;
-  margin: 0px !important;
-  border: 2px solid #fff;
+.cardbox-base p{
+  font-size: 18px;
+  padding: 10px;
 }
 
 
@@ -552,3 +523,43 @@ text-align: center;
  font-size: 16px;
  color: #8d8d8d;
 }
+
+.bg-signup{
+  background-color: #60a3bc;
+
+  height: 100vh;
+
+
+}
+
+.container1{
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
+  display: block;
+  max-width: 480px;
+  overflow: hidden;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%; z-index: 1;
+  width: 98%;
+  background-color: white;
+  opacity: 90%;
+  }
+
+  .btn{
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-left: 100px;
+
+    }

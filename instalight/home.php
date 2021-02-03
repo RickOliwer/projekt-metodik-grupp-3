@@ -4,11 +4,12 @@ require_once 'function.php';
 $postresult = fetchColoumnFromTable($pdo, 'posts');
 
 ?>
-
+<main class="main-container">
 <?php foreach (array_reverse ($postresult) as $row):?>
 
+	
       <section class="hero">
-         <div class="container1">
+         <div class="container">
           <div class="row">	
 		  
 		   <div class="col-lg-6 offset-lg-3">
@@ -32,8 +33,8 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 				<a href=""><img class="img-fluid rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg" alt="User"></a>
 			   </div>
 			   <div class="media-body">
-			    <p class="m-0"><p><?= $row ['posted_by']?></p>
-				<small><span><i class="icon ion-md-pin"></i><?= $row ['title']?></span></small>
+			    <p class="m-0"><?= $row ['posted_by']?></p>
+				<small class="title-txt"><span><i class="icon ion-md-pin"></i><?= $row ['title']?></span></small>
 				<small><span><i class="icon ion-md-time"></i> <?= $row ['date']?></span></small>
 			   </div>
 			  </div><!--/ media -->
@@ -43,29 +44,15 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 			 <div class="cardbox-item">
 			  <img class="img-fluid" src="images/<?= $row ['img']?>" alt="Image">
 			 </div><!--/ cardbox-item -->
-			 <div class="cardbox-base"><p>
-       		<?= $row ['bio']?></p>
-         
-         
-			  
-			  <ul>
-			  <div class="cardbox-comments">
-			  <span class="comment-avatar float-left">
-			   <a href=""><img class="rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/6.jpg" alt="..."></a>                            
-			  </span>
-			  <div class="search">
-			   <input placeholder="Write a comment" type="text">
-			   <button><i class="fa fa-camera"></i></button>
-			  </div><!--/. Search -->
-			 </div><!--/ cardbox-like -->			  
-					
-			</div><!--/ cardbox -->
+			 <div class="cardbox-base">
+				 <p><?= $row ['bio']?></p>
+         	</div><!--/ cardbox -->
 </div>
 </section>
 
 <?php endforeach;?>
 
-
+</main>
         
           
 

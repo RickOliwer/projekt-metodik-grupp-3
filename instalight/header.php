@@ -13,17 +13,56 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Instagun</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="header.css">
+    
     
 </head>
 <body>
+<header>
+<nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="home.php">Instagun!</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="upload_image.php?user=<?php echo $_SESSION['user']['id'] ?>">Add post</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                    
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
 
-<h1>welcome <?php echo $_SESSION['user']['username']?></h1>
-<a href="logout.php">logout</a>
-<a href="upload_image.php?user=<?php echo $_SESSION['user']['id']; ?>">add post</a>
+    <section class="home">
+    </section>
+    
+    </header>
+
      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="header.js"></script>
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>

@@ -39,7 +39,7 @@ if(isset($_GET['user'])){
 
 
 ?>
-
+<main class="main-container">
 <?php if(isset($_GET['user'])) : ?>
 <div>
         <h2>Upload Image</h2>
@@ -57,5 +57,6 @@ if(isset($_GET['user'])){
 
     </div>
 <?php endif ; ?>
+</main>
 </body>
 </html>
