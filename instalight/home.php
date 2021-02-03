@@ -1,7 +1,7 @@
 <?php
 require_once 'header.php';
 require_once 'function.php';
-$postresult = fetchColoumnFromTable ($pdo, 'posts');
+$postresult = fetchColoumnFromTable($pdo, 'posts');
 
 ?>
 
@@ -44,7 +44,7 @@ $postresult = fetchColoumnFromTable ($pdo, 'posts');
 			  <img class="img-fluid" src="images/<?= $row ['img']?>" alt="Image">
 			 </div><!--/ cardbox-item -->
 			 <div class="cardbox-base"><p>
-       <?= $row ['bio']?></p>
+       		<?= $row ['bio']?></p>
          
          
 			  
