@@ -30,7 +30,7 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 			  </div><!--/ dropdown -->
 			  <div class="media m-0">
 			   <div class="d-flex mr-3">
-				<a href=""><img class="img-fluid rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg" alt="User"></a>
+				<a href=""><img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/creative-illustration-default-avatar-profile-placeholder-isolated-background-art-design-grey-photo-blank-template-mockup-144849704.jpg" alt="User"></a>
 			   </div>
 			   <div class="media-body">
 			    <p class="m-0"><?= $row ['posted_by']?></p>
