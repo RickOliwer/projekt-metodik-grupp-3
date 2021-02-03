@@ -1,47 +1,68 @@
 <?php
-
-
 require_once 'header.php';
 ?>
 
 
 
-<div class="container">
-<div class="row">
-  <div class="span12">
-    <div class="row">
-      <div class="span8">
-        <h4><strong><a href="#">Title of the post</a></strong></h4>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span2">
-        <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x180" alt="">
-        </a>
-      </div>
-      <div class="span10">      
-        <p>
-          Lorem ipsum dolor sit amet, id nec conceptam conclusionemque. Et eam tation option. Utinam salutatus ex eum. Ne mea dicit tibique facilisi, ea mei omittam explicari conclusionemque, ad nobis propriae quaerendum sea.
-        </p>
-        <p><a class="btn" href="#">Read more</a></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span8">
-        <p></p>
-        <p>
-          <i class="icon-user"></i> by <a href="#">John</a> 
-          | <i class="icon-calendar"></i> Sept 16th, 2012
-          | <i class="icon-comment"></i> <a href="#">3 Comments</a>
-          | <i class="icon-share"></i> <a href="#">39 Shares</a>
-          | <i class="icon-tags"></i> Tags : <a href="#"><span class="label label-info">Snipp</span></a> 
-          <a href="#"><span class="label label-info">Bootstrap</span></a> 
-          <a href="#"><span class="label label-info">UI</span></a> 
-          <a href="#"><span class="label label-info">growth</span></a>
-        </p>
-      </div>
-    </div>
-  </div>
+      <section class="hero">
+         <div class="container1">
+          <div class="row">	
+		  
+		   <div class="col-lg-6 offset-lg-3">
+			
+			<div class="cardbox shadow-lg bg-white">
+			 
+			 <div class="cardbox-heading">
+			  <!-- START dropdown-->
+			  <div class="dropdown float-right">
+			   <button class="btn btn-flat btn-flat-icon" type="button" data-toggle="dropdown" aria-expanded="false">
+				<em class="fa fa-ellipsis-h"></em>
+			   </button>
+			   <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
+				<a class="dropdown-item" href="#">Hide post</a>
+				<a class="dropdown-item" href="#">Stop following</a>
+				<a class="dropdown-item" href="#">Report</a>
+			   </div>
+			  </div><!--/ dropdown -->
+			  <div class="media m-0">
+			   <div class="d-flex mr-3">
+				<a href=""><img class="img-fluid rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg" alt="User"></a>
+			   </div>
+			   <div class="media-body">
+			    <p class="m-0">Benjamin Robinson</p>
+				<small><span><i class="icon ion-md-pin"></i>Title</span></small>
+				<small><span><i class="icon ion-md-time"></i> Time</span></small>
+			   </div>
+			  </div><!--/ media -->
+			 </div><!--/ cardbox-heading -->
+			  		   
+			  
+			 <div class="cardbox-item">
+			  <img class="img-fluid" src="image" alt="Image">
+			 </div><!--/ cardbox-item -->
+			 <div class="cardbox-base">
+         	<p>bio</p>
+         
+         
+			  
+			  <ul>
+			  <div class="cardbox-comments">
+			  <span class="comment-avatar float-left">
+			   <a href=""><img class="rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/6.jpg" alt="..."></a>                            
+			  </span>
+			  <div class="search">
+			   <input placeholder="Write a comment" type="text">
+			   <button><i class="fa fa-camera"></i></button>
+			  </div><!--/. Search -->
+			 </div><!--/ cardbox-like -->			  
+					
+			</div><!--/ cardbox -->
 </div>
-<hr>
+</section>
+
+        
+          
+
+<?php
+require_once 'footer.php';
+?>
