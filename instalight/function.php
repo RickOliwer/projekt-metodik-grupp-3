@@ -30,3 +30,13 @@ function joinUserWithPost($pdo, $userID){
 
     return $statement;
 }
+
+function fetchColoumnFromTable($pdo, $tableName){
+$sql = sprintf('select * from %s', 
+    $tableName
+);
+$statement= $pdo->prepare($sql);
+$statement->execute();
+return $statement->fetchAll(PDO::FETCH_ASSOC);
+
+}

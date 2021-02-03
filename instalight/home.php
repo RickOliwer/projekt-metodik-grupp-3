@@ -1,8 +1,11 @@
 <?php
 require_once 'header.php';
+require_once 'function.php';
+$postresult = fetchColoumnFromTable ($pdo, 'posts');
+
 ?>
 
-
+<?php foreach (array_reverse ($postresult) as $row):?>
 
       <section class="hero">
          <div class="container1">
@@ -29,19 +32,19 @@ require_once 'header.php';
 				<a href=""><img class="img-fluid rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg" alt="User"></a>
 			   </div>
 			   <div class="media-body">
-			    <p class="m-0">Benjamin Robinson</p>
-				<small><span><i class="icon ion-md-pin"></i>Title</span></small>
-				<small><span><i class="icon ion-md-time"></i> Time</span></small>
+			    <p class="m-0"><p><?= $row ['posted_by']?></p>
+				<small><span><i class="icon ion-md-pin"></i><?= $row ['title']?></span></small>
+				<small><span><i class="icon ion-md-time"></i> <?= $row ['date']?></span></small>
 			   </div>
 			  </div><!--/ media -->
 			 </div><!--/ cardbox-heading -->
 			  		   
 			  
 			 <div class="cardbox-item">
-			  <img class="img-fluid" src="image" alt="Image">
+			  <img class="img-fluid" src="images/<?= $row ['img']?>" alt="Image">
 			 </div><!--/ cardbox-item -->
-			 <div class="cardbox-base">
-         	<p>bio</p>
+			 <div class="cardbox-base"><p>
+       <?= $row ['bio']?></p>
          
          
 			  
@@ -59,6 +62,9 @@ require_once 'header.php';
 			</div><!--/ cardbox -->
 </div>
 </section>
+
+<?php endforeach;?>
+
 
         
           

@@ -19,8 +19,9 @@ if(isset($_GET['user'])){
             'title' => $title = $_POST['title'],
             'bio' => $textArea = $_POST['bio'],
             'img' => $imageName,
-            'userid' => $userID = $_POST['user_id']
-            //'posted_by' => $postedBy = $_SESSION['user']['username']
+            'userid' => $userID = $_POST['user_id'],
+            'posted_by' => $postedBy = $_SESSION['user']['username']
+            
         ];
 
     
