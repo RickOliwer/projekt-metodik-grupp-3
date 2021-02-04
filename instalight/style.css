@@ -11,9 +11,21 @@
     z-index: 100;
   }
 
-  .main-container{
-    background-color: rgb(242, 242, 242);
+  .main-container-post{
+    margin: auto;
+    width: 50%;
+    border-radius: 2.2em; 
   }
+
+  .main-container-post .formcontainer{
+    margin:auto;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+  }
+
+
+
   a {
     color: #92badd;
     display:inline-block;
@@ -418,8 +430,7 @@ text-align: center;
     position: relative;
     display: block;
 }
-.cardbox .cardbox-item img{
-}
+
 .img-responsive{
     display: block;
     max-width: 100%;
@@ -543,6 +554,12 @@ text-align: center;
   opacity: 90%;
   }
 
+.container2{
+  width:50%;
+  margin:auto;
+  
+}
+
   .btn{
     background-color: #56baed;
     border: none;
@@ -556,3 +573,35 @@ text-align: center;
     margin-left: 100px;
 
     }
+
+    .main-container-post .btnbg{
+      background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 5px;
+
+    }
+
+    input[type="file"]{
+      display: none;
+    }
+
+    .fileinput{
+      background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 5px;
+    }
+    

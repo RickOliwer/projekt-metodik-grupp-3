@@ -39,24 +39,32 @@ if(isset($_GET['user'])){
 
 
 ?>
-<main class="main-container">
+<main class="main-container-post">
 <?php if(isset($_GET['user'])) : ?>
-<div>
+<div class="formcontainer">
         <h2>Upload Image</h2>
         <form method="POST" enctype="multipart/form-data">
-            <label for="titel">Titel:</label>
-            <input type="text" name="title" id="title">
+        <div class="col">
+            <input placeholder="Titel" type="text" name="title" id="title" class="inputpadding">
+           
+            <input placeholder="Description"type="text" name="bio" id="desc" class="inputpadding">
+            
 
-            <label for="desc">Description:</label>
-            <input type="text" name="bio" id="desc">
-
-            <input type="file" name="file">
-            <input type="hidden" value="<?php echo $_GET['user'] ?>" name="user_id" />
-            <button type="submit" name="submit">UPLOAD</button>
+</div>
+<br>
+<div class="col">
+            <input type="file" name="file" id="file">
+            <label for="file" class="fileinput ">Load Image</label>
+</div>
+            <div class="col">
+            <input type="hidden" value="<?php echo $_GET['user'] ?>" name="user_id"/>
+            
+            <button type="submit" class=" btn-succes btnbg" name="submit">UPLOAD</button>
+</div>
         </form>
 
     </div>
 <?php endif ; ?>
 </main>
-</body>
-</html>
+
+<?php require_once 'footer.php'; ?>
