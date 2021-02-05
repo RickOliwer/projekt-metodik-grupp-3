@@ -115,7 +115,8 @@ body {
     }
     .nav div.show_list {
         height: auto;
-        display: none;
+        display: block;
+        
     }
     .nav div.main_list ul {
         flex-direction: column;
@@ -124,7 +125,8 @@ body {
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
+        z-index: 100;
+        background-color: #fff;
         /*same background color of navbar*/
         background-position: center top;
     }
@@ -159,7 +161,7 @@ body {
 }
 
 .navTrigger i {
-    background-color: #fff;
+    background-color: #333;
     border-radius: 2px;
     content: '';
     display: block;
