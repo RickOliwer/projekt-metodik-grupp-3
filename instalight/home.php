@@ -46,7 +46,39 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 			 </div><!--/ cardbox-item -->
 			 <div class="cardbox-base">
 				 <p><?= $row ['bio']?></p>
-         	</div><!--/ cardbox -->
+			 </div><!--/ cardbox -->
+			 <div class="toggle-comments">
+				 <p class="toggle-comments-link">
+					 comments
+				 </p>
+			 </div>
+			 <div class="comments-box">
+				 <div class="comment-input">
+					 <form method="POST">
+						 <input type="text" name="comment" placeholder="write a comment here!">
+					 </form>
+				 </div>
+				 <div class="comments">
+					 <h6>from Shakir</h6><span>Date:</span>
+					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p>
+					 
+
+				 </div>
+				 <div class="comments">
+				 	<h6>from Shakir</h6><span>Date:</span>
+					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p>
+					 
+				 </div>
+				 <div class="comments">
+				 <h6>from Shakir</h6><span>Date:</span>
+					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p>
+				 </div>
+				 <div class="comments">
+				 	<h6>from Shakir</h6><span>Date:</span>
+					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p>
+				 </div>
+			 </div>
+
 </div>
 </section>
 
