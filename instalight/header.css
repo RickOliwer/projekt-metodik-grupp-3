@@ -78,7 +78,7 @@ body {
     height: 100vh;
     background-image: url("headerimg/gun.jpg");
     background-position: center top;
-	background-size:cover;
+    background-size:cover;
 }
 
 .navTrigger {

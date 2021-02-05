@@ -4,6 +4,8 @@ require_once 'function.php';
 $postresult = fetchColoumnFromTable($pdo, 'posts');
 
 ?>
+<section class="home">
+    </section>
 <main class="main-container">
 <?php foreach (array_reverse ($postresult) as $row):?>
 

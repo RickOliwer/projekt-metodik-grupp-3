@@ -1,47 +1,13 @@
 <?php
-
-
     include 'upload.php';
-    require_once 'function.php';
     require_once 'header.php';
+    require_once 'getuserpost.php';
     
-if(isset($_GET['user'])){
-
-    if(isset($_POST['submit'])){
-        print_r($_POST);
-        $imageInput = 'file';
-        $folder = 'images/';
-        $imageByteSize = 5000000;
-        
-        $imageName = addImageToFolder($imageInput, $folder, $imageByteSize);
-
-        $saveData = [
-            'title' => $title = $_POST['title'],
-            'bio' => $textArea = $_POST['bio'],
-            'img' => $imageName,
-            'userid' => $userID = $_POST['user_id'],
-            'posted_by' => $postedBy = $_SESSION['user']['username']
-            
-        ];
-
-    
-        saveToDB($pdo, 'posts', $saveData);
-
-
-    
-    }
-
-    $userID = $_GET['user'];
-    $postByUserStatement = joinUserWithPost($pdo, $userID);
-    $postByUser = $postByUserStatement->fetchAll(PDO::FETCH_CLASS);
-}
-
-
-
 ?>
 <main class="main-container-post">
 <?php if(isset($_GET['user'])) : ?>
 <div class="formcontainer">
+<div class="py-5">
         <h2>Upload Image</h2>
         <form method="POST" enctype="multipart/form-data">
         <div class="col">
@@ -64,6 +30,7 @@ if(isset($_GET['user'])){
         </form>
 
     </div>
+</div>
 <?php endif ; ?>
 </main>
 

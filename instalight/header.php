@@ -14,6 +14,8 @@ if (!isset($_SESSION['loggedin'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagun</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -23,7 +25,7 @@ if (!isset($_SESSION['loggedin'])) {
     
     
 </head>
-<body>
+
 <header>
 <nav class="nav">
         <div class="container">
@@ -34,9 +36,9 @@ if (!isset($_SESSION['loggedin'])) {
                 <ul class="navlinks">
                     <li><a href="home.php">Home</a></li>
                     <li><a href="upload_image.php?user=<?php echo $_SESSION['user']['id'] ?>">Add post</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="profile.php?user=<?php echo $_SESSION['user']['id'] ?>">Profile</a></li>
                     <li><a href="logout.php">Logout</a></li>
-                    
+                   
                 </ul>
             </div>
             <span class="navTrigger">
@@ -47,11 +49,10 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
     </nav>
 
-    <section class="home">
-    </section>
+    
     
     </header>
-
+    <body>
      
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="header.js"></script>
@@ -66,3 +67,4 @@ if (!isset($_SESSION['loggedin'])) {
             }
         });
     </script>
+    
