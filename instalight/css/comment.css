@@ -1,10 +1,12 @@
 .toggle-comments{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 14px;
 }
 .comments-box{
-    display: none;
-    height: 90%;
+    /* display: none; */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.7s ease-out;
     
 }
 .comment-input{
@@ -35,3 +37,6 @@
     font-size: 14px;
 }
 
+.toggle-comments-link{
+    margin: 10px;
+}

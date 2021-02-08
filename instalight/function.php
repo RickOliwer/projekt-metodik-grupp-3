@@ -31,6 +31,19 @@ function joinUserWithPost($pdo, $userID){
     return $statement;
 }
 
+function joinPostWithComment($pdo, $post_id){
+    $sql = 'SELECT comments.comment, posts.id
+            FROM posts
+            LEFT JOIN comments
+            ON posts.id = comments.post_id
+            WHERE comments.post_id = :post_id';
+    $statement = $pdo->prepare($sql);
+    $statement->bindParam(':post_id', $post_id);
+    $statement->execute();
+
+    return $statement;
+}
+
 function fetchColoumnFromTable($pdo, $tableName){
 $sql = sprintf('select * from %s', 
     $tableName

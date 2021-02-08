@@ -1,6 +1,7 @@
 <?php
 require_once 'header.php';
 require_once 'function.php';
+require_once 'functions/add-comment.php';
 $postresult = fetchColoumnFromTable($pdo, 'posts');
 
 ?>
@@ -56,27 +57,15 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 				 <div class="comment-input">
 					 <form method="POST">
 						 <input type="text" name="comment" placeholder="write a comment here!">
+						 <input type="hidden" value="<?php echo $row['id'] ?>" name="post_id"/>
+						 <input type="submit" name="submit-com" value="submit">
 					 </form>
 				 </div>
 				 <div class="comments">
-					 <h6>from Shakir</h6><span>Date:</span>
-					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p>
-					 
-
+					 <h6></h6><span>Date:</span>
+					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p> 
 				 </div>
-				 <div class="comments">
-				 	<h6>from Shakir</h6><span>Date:</span>
-					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p>
-					 
-				 </div>
-				 <div class="comments">
-				 <h6>from Shakir</h6><span>Date:</span>
-					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p>
-				 </div>
-				 <div class="comments">
-				 	<h6>from Shakir</h6><span>Date:</span>
-					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p>
-				 </div>
+				 
 			 </div>
 
 </div>
