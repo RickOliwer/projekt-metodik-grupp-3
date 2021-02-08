@@ -32,7 +32,7 @@ function joinUserWithPost($pdo, $userID){
 }
 
 function joinPostWithComment($pdo, $post_id){
-    $sql = 'SELECT comments.comment, posts.id
+    $sql = 'SELECT comments.comment, comments.date, posts.id
             FROM posts
             LEFT JOIN comments
             ON posts.id = comments.post_id

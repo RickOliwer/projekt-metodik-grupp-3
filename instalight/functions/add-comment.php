@@ -1,6 +1,6 @@
 <?php
 
-//require_once '../function.php';
+
 
 if(isset($_POST['submit-com'])){
 
@@ -16,3 +16,8 @@ $newData = [
 saveToDB($pdo, 'comments', $newData);
 
 }
+
+$post_id;
+$postByCommentStatement = joinPostWithComment($pdo, $post_id);
+$postByComment = $postByCommentStatement->fetchAll(PDO::FETCH_CLASS);
+

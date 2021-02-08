@@ -3,6 +3,7 @@ require_once 'header.php';
 require_once 'function.php';
 require_once 'functions/add-comment.php';
 $postresult = fetchColoumnFromTable($pdo, 'posts');
+$comments = fetchColoumnFromTable($pdo, 'comments');
 
 ?>
 <main class="main-container">
@@ -48,11 +49,14 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 			 <div class="cardbox-base">
 				 <p><?= $row ['bio']?></p>
 			 </div><!--/ cardbox -->
+			
 			 <div class="toggle-comments">
 				 <p class="toggle-comments-link">
 					 comments
 				 </p>
 			 </div>
+			 
+			 
 			 <div class="comments-box">
 				 <div class="comment-input">
 					 <form method="POST">
@@ -61,12 +65,19 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 						 <input type="submit" name="submit-com" value="submit">
 					 </form>
 				 </div>
+				
+				 <?php foreach(array_reverse($comments) as $comment): ?>
+				<?php if($comment['post_id'] == $row['id']) : ?>
 				 <div class="comments">
-					 <h6></h6><span>Date:</span>
-					 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium et ducimus quidem quis sint vel laborum iste numquam deserunt sed adipisci quos, inventore minus dolor sapiente rerum! Officia, ad!</p> 
+					 <h6>From Shakir</h6><span><?= $comment['date'] ?></span>
+					 <p><?= $comment['comment']?></p> 
 				 </div>
+				 <?php endif ; ?>
+				 <?php endforeach ; ?>
 				 
 			 </div>
+			 
+			 
 
 </div>
 </section>
