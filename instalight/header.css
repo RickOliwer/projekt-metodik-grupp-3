@@ -32,10 +32,13 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 2.5rem;
+    text-shadow: 2px 2px #ffffff;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .nav div.logo a:hover {
-    color: #00E676;
+    color: #00d7e6;
 }
 
 .nav div.main_list {
@@ -67,7 +70,7 @@ body {
 }
 
 .nav div.main_list ul li a:hover {
-    color: #00E676;
+    color: #00d7e6;
 }
 
 

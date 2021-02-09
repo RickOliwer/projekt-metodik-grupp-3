@@ -10,7 +10,7 @@ $comments = fetchColoumnFromTable($pdo, 'comments');
 <?php foreach (array_reverse ($postresult) as $row):?>
 
 	
-      <section class="hero">
+	  <section class="hero" id="comment<?= $row['id'] ?>">
          <div class="container">
           <div class="row">	
 		  
@@ -57,19 +57,22 @@ $comments = fetchColoumnFromTable($pdo, 'comments');
 			 </div>
 			 
 			 
-			 <div class="comments-box">
+			 <div class="comments-box" >
 				 <div class="comment-input">
-					 <form method="POST">
-						 <input type="text" name="comment" placeholder="write a comment here!">
+					 <form class="stop-form" method="POST">
+						 <input class="input-comments" type="text" name="comment" placeholder="write a comment here!">
 						 <input type="hidden" value="<?php echo $row['id'] ?>" name="post_id"/>
-						 <input type="submit" name="submit-com" value="submit">
+						 <input type="hidden" value="<?php echo $_SESSION['user']['id'] ?>" name="user_id"/>
+						 <input type="hidden" value="<?php echo $_SESSION['user']['username'] ?>" name="username"/>
+
+						 <input type="submit" name="submit-com" value="submit" class="toggle-comments2">
 					 </form>
 				 </div>
 				
 				 <?php foreach(array_reverse($comments) as $comment): ?>
 				<?php if($comment['post_id'] == $row['id']) : ?>
 				 <div class="comments">
-					 <h6>From Shakir</h6><span><?= $comment['date'] ?></span>
+					 <h6>From <?= $comment['username']?></h6><span><?= $comment['date'] ?></span>
 					 <p><?= $comment['comment']?></p> 
 				 </div>
 				 <?php endif ; ?>
@@ -91,3 +94,4 @@ $comments = fetchColoumnFromTable($pdo, 'comments');
 <?php
 require_once 'footer.php';
 ?>
+
