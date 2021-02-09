@@ -21,7 +21,6 @@ if(isset($_GET['user'])){
             'img' => $imageName,
             'userid' => $userID = $_POST['user_id'],
             'posted_by' => $postedBy = $_SESSION['user']['username']
-            
         ];
 
     

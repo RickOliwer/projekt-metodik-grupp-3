@@ -1,4 +1,7 @@
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (!isset($_SESSION['loggedin'])) {
@@ -17,9 +20,15 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script> -->
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  ></script>
+		
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <script src="js/functions.js"></script>
+    
     
     
 </head>

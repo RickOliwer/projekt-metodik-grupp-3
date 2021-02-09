@@ -1,14 +1,16 @@
 <?php
 require_once 'header.php';
 require_once 'function.php';
+require_once 'functions/add-comment.php';
 $postresult = fetchColoumnFromTable($pdo, 'posts');
+$comments = fetchColoumnFromTable($pdo, 'comments');
 
 ?>
 <main class="main-container">
 <?php foreach (array_reverse ($postresult) as $row):?>
 
 	
-      <section class="hero">
+	  <section class="hero" id="comment<?= $row['id'] ?>">
          <div class="container">
           <div class="row">	
 		  
@@ -46,7 +48,40 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 			 </div><!--/ cardbox-item -->
 			 <div class="cardbox-base">
 				 <p><?= $row ['bio']?></p>
-         	</div><!--/ cardbox -->
+			 </div><!--/ cardbox -->
+			
+			 <div class="toggle-comments">
+				 <p class="toggle-comments-link">
+					 comments
+				 </p>
+			 </div>
+			 
+			 
+			 <div class="comments-box" >
+				 <div class="comment-input">
+					 <form class="stop-form" method="POST">
+						 <input class="input-comments" type="text" name="comment" placeholder="write a comment here!">
+						 <input type="hidden" value="<?php echo $row['id'] ?>" name="post_id"/>
+						 <input type="hidden" value="<?php echo $_SESSION['user']['id'] ?>" name="user_id"/>
+						 <input type="hidden" value="<?php echo $_SESSION['user']['username'] ?>" name="username"/>
+
+						 <input type="submit" name="submit-com" value="submit" class="toggle-comments2">
+					 </form>
+				 </div>
+				
+				 <?php foreach(array_reverse($comments) as $comment): ?>
+				<?php if($comment['post_id'] == $row['id']) : ?>
+				 <div class="comments">
+					 <h6>From <?= $comment['username']?></h6><span><?= $comment['date'] ?></span>
+					 <p><?= $comment['comment']?></p> 
+				 </div>
+				 <?php endif ; ?>
+				 <?php endforeach ; ?>
+				 
+			 </div>
+			 
+			 
+
 </div>
 </section>
 
@@ -59,3 +94,4 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 <?php
 require_once 'footer.php';
 ?>
+

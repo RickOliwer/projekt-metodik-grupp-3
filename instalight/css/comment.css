@@ -1,0 +1,42 @@
+.toggle-comments{
+    cursor: pointer;
+    font-size: 14px;
+}
+.comments-box{
+    /* display: none; */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.7s ease-out;
+    
+}
+.comment-input{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.comment-input input{
+    width: 100%;
+    margin: auto;
+}
+.comments{
+    width: 80%;
+    border-radius: 5px;
+    border: .5px solid rgb(218, 218, 218);
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.comments p, h6, span{
+    margin: 10px;
+}
+
+
+
+.comments p{
+    font-size: 14px;
+}
+
+.toggle-comments-link{
+    margin: 10px;
+}
