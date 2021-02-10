@@ -4,7 +4,10 @@
  require_once 'getuserpost.php';
  require_once 'functions/add-comment.php';
  require_once 'delete-comment.php';
+ require_once 'delete-post.php';
  $comments = fetchColoumnFromTable($pdo, 'comments');
+
+ 
  
 ?>
 
@@ -30,9 +33,10 @@
 				<em class="fa fa-ellipsis-h"></em>
 			   </button>
 			   <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
-				<a class="dropdown-item" href="#">Hide post</a>
+				<!-- <a class="dropdown-item" href="#">Hide post</a>
 				<a class="dropdown-item" href="#">Stop following</a>
-				<a class="dropdown-item" href="#">Report</a>
+                <a class="dropdown-item" href="#">Report</a> -->
+                <a class="dropdown-item" href="userposts.php?delete-post=<?php echo $row->id ?>">Delete</a>
 			   </div>
 			  </div><!--/ dropdown -->
 			  <div class="media m-0">

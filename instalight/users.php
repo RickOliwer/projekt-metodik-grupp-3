@@ -4,6 +4,8 @@ require_once 'function.php';
 
 $users = fetchColoumnFromTable($pdo, 'users');
 
+
+
 ?>
 <section class="home-none"></section>
 <main class="main-container">
@@ -14,7 +16,7 @@ $users = fetchColoumnFromTable($pdo, 'users');
 <div class="profile-card">
         <div class="blog-profile">
             <div class="blog-profile_img">
-                <img src="profileimg/pexels-spencer-selover-428364.jpg" alt="">
+                <img src="profileimg/<?= $user['profile_img']?>" alt="">
             </div>
             <div class="blog-profile_info">
                 <div class="blog-profile_data">
@@ -23,7 +25,7 @@ $users = fetchColoumnFromTable($pdo, 'users');
                     
                 </div>
                 <h1 class="blog-profile_title"><a href="view-profile.php?user=<?php echo $user['id']?>"><?= $user['username']?></a></h1>
-                <p class="blog-post_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reiciendis libero</p>
+                <p class="blog-post_text"><?= $user['about'] ?></p>
             </div>
         </div>
 

@@ -3,6 +3,8 @@
     require_once 'header.php';
     // $postresult = fetchColoumnFromTable($pdo, 'posts');
     require_once 'getuserpost.php';
+    $userID = $_GET['user'];
+    $userInfo = addProfileToViewProfile($pdo, $userID);
 ?>
 
 
@@ -14,11 +16,12 @@
 
     <div class="col-md-5 mx-auto">
         
+    <?php foreach($userInfo as $row) : ?>
         <!-- Profile widget -->
         <div class="bg-white shadow rounded overflow-hidden container-profile">
             <div class="px-4 pt-0 pb-4 cover">
                 <div class="media align-items-end profile-head">
-                    <div class="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="editprofile.php?user=<?php echo $_SESSION['user']['id']?>" class="btn2">Edit profile</a></div>
+                    <div class="profile mr-3"><img src="profileimg/<?php echo $row['profile_img']?>" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="editprofile.php?user=<?php echo $_SESSION['user']['id']?>" class="btn2">Edit profile</a></div>
                     
                         
                 </div>
@@ -51,6 +54,8 @@
                     <h5 class="mb-0">Recent photos</h5></form><a href="userposts.php?user=<?php echo $_SESSION['user']['id'] ?>" class="btn2">Show all</a>
                 </div>
                 <div class="row">
+    <?php endforeach; ?>
+    
                 <?php foreach (array_reverse($postByUser) as $row):?>
                 
 

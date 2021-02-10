@@ -1,6 +1,6 @@
 <?php
-     require_once 'upload.php';
-     require_once 'function.php';
+     //require_once 'upload.php';
+     //require_once 'function.php';
      
 if(isset($_GET['user'])){
 
