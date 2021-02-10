@@ -45,6 +45,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <ul class="navlinks">
                     <li><a href="home.php">Home</a></li>
                     <li><a href="upload_image.php?user=<?php echo $_SESSION['user']['id'] ?>">Add post</a></li>
+                    <li><a href="users.php">All Users</a></li>
                     <li><a href="profile.php?user=<?php echo $_SESSION['user']['id'] ?>">Profile</a></li>
                     <li><a href="logout.php">Logout</a></li>
                    
