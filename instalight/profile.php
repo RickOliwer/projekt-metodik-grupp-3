@@ -48,7 +48,7 @@
             
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Recent photos</h5><a href="#" class="btn2">Show all</a>
+                    <h5 class="mb-0">Recent photos</h5></form><a href="userposts.php?user=<?php echo $_SESSION['user']['id'] ?>" class="btn2">Show all</a>
                 </div>
                 <div class="row">
                 <?php foreach (array_reverse($postByUser) as $row):?>
@@ -65,6 +65,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 

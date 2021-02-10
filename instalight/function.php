@@ -18,7 +18,7 @@ function saveToDB($pdo, $tableName, $newData){
 }
 
 function joinUserWithPost($pdo, $userID){
-    $sql = 'SELECT users.email, users.username, posts.id, posts.img, posts.title, posts.bio
+    $sql = 'SELECT users.email, users.username, users.id, posts.id, posts.img, posts.title, posts.bio, posts.posted_by, users.date
             FROM users
             LEFT JOIN posts
             ON users.id = posts.userid
@@ -47,11 +47,19 @@ function joinPostWithComment($pdo, $post_id){
 function fetchColoumnFromTable($pdo, $tableName){
 $sql = sprintf('select * from %s', 
     $tableName
-);
+    );
 $statement= $pdo->prepare($sql);
 $statement->execute();
 return $statement->fetchAll(PDO::FETCH_ASSOC);
 
+}
+
+function deleteColumnFromTable($pdo, $tableName, $id){
+    $sql = sprintf('delete from %s where id=:id ',
+            $tableName,
+    );
+    $statement = $pdo->prepare($sql);
+    $statement->execute(array(":id"=>$id));
 }
 
 function EditProfile($pdo, $tableName, $newData){
