@@ -60,7 +60,7 @@
                 
 
                     
-                    <div class="col-lg-6 pr-lg-1 mb-2"><img class="img-fluid" src="images/<?= $row->img?>" alt="Image"></div>
+                    <div class="col-lg-6 pr-lg-1 mb-2"><a href="home.php#comment<?= $row->id ?>"><img class="img-fluid" src="images/<?= $row->img?>" alt="Image"></a></div>
                     
              
 			      

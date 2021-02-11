@@ -5,6 +5,8 @@
     require_once 'getuserpost.php';
     
 ?>
+
+<section class="home-none"></section>
 <main class="main-container-post">
 <?php if(isset($_GET['user'])) : ?>
 <div class="formcontainer">
