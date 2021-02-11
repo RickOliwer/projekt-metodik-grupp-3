@@ -10,7 +10,6 @@ $users = fetchColoumnFromTable($pdo, 'users');
 <section class="home-none"></section>
 <main class="main-container">
 
-<h1>hello users</h1>
 
 <?php foreach($users as $user): ?>
 <div class="profile-card">

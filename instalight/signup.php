@@ -44,7 +44,7 @@
     </div>
     <div class="col">
     <div class="form-group">
-      <input name="pass" type="password" class="form-control" placeholder="Password"require>
+      <input name="pass" type="pass" class="form-control" placeholder="Password"require>
     </div>
   </div>
   </div>
