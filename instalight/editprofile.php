@@ -20,7 +20,7 @@ require_once 'header.php';
     
     <?php if(isset($_GET['user'])):?>
     
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 <div class="row">
     <div class="col">
       <input name="username" type="text" class="form-control" placeholder="username">
@@ -32,6 +32,17 @@ require_once 'header.php';
   <div class="row">
     <div class="col">
       <input name="email" type="text" class="form-control" placeholder="Email">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col">
+      <input name="about" type="text" class="form-control" placeholder="About">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col">
+      <input name="profile_file" id="file" type="file" placeholder="profile image">
+      <label for="file" class="fileinput ">Load Image</label>
     </div>
     </div>
   <div class="row">

@@ -6,8 +6,8 @@ $postresult = fetchColoumnFromTable($pdo, 'posts');
 $comments = fetchColoumnFromTable($pdo, 'comments');
 
 ?>
-<section class="home">
-    </section>
+<section class="home-none">
+</section>
 <main class="main-container">
 <?php foreach (array_reverse ($postresult) as $row):?>
 

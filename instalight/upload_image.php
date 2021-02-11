@@ -1,9 +1,12 @@
 <?php
-    include 'upload.php';
+    //include 'upload.php';
     require_once 'header.php';
+    require_once 'function.php';
     require_once 'getuserpost.php';
     
 ?>
+
+<section class="home-none"></section>
 <main class="main-container-post">
 <?php if(isset($_GET['user'])) : ?>
 <div class="formcontainer">
