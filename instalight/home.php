@@ -96,4 +96,3 @@ $comments = fetchColoumnFromTable($pdo, 'comments');
 <?php
 require_once 'footer.php';
 ?>
-

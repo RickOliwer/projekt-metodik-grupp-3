@@ -5,7 +5,7 @@
 if(isset($_GET['user'])){
 
     if(isset($_POST['submit'])){
-        print_r($_POST);
+    
         $imageInput = 'file';
         $folder = 'images/';
         $imageByteSize = 5000000;
